@@ -26,6 +26,7 @@ Lv2
 * 주문 생성 : /api/orders
 * 주문 삭제 : /api/orders/{order-id}
 
+## 음식 DB Table
 | 컬럼 내용 | 컬럼             | 데이터 타입       | 널 허용 | PK  | FK        | Unique | 
 |-------|----------------|--------------|------|-----|-----------|--------|
 | 음식 번호 | food_id        | integer      | No   | Yes |           | Yes    |
