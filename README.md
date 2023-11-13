@@ -1,6 +1,5 @@
 # deliivery01
-
-# 배달 어플 만들기
+## 배달 어플 만들기
 
 ## API
 ### 회원
@@ -25,6 +24,3 @@ Lv2
 * 주문 생성 : /api/orders
 * 주문 삭제 : /api/orders/{order-id}
 
-#   d e l i i v e r y 0 1 
- 
- 
