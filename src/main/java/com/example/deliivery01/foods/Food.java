@@ -14,7 +14,7 @@ import java.time.LocalDateTime;
 public class Food {
     @Id
     @GeneratedValue(strategy =  GenerationType.IDENTITY)
-    private Long foodId;
+    private Long id;
 
     @Column(length = 100, nullable = false)
     private String foodName;
