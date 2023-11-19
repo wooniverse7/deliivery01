@@ -1,4 +1,4 @@
-package com.example.deliivery01.foods;
+package com.example.deliivery01.food.domain;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -17,19 +17,19 @@ public class Food {
     private Long id;
 
     @Column(length = 100, nullable = false)
-    private String foodName;
+    private String name; // 음식 이름
 
     @Column(length = 100, nullable = false)
-    private String foodType;
+    private String type; // 음식 종류
 
     @Column(length = 255, nullable = false)
     private String description;
 
     @Column(nullable = false)
-    private Integer price;
+    private int price;
 
     @Column(nullable = false)
-    private Integer store_id;
+    private int store_id;
 
     @Column(length = 255, nullable = false)
     private String main_image_url;
@@ -43,6 +43,13 @@ public class Food {
 
     @Column(nullable = false, name = "LAST_MODIFIED_AT")
     private LocalDateTime modifiedAt = LocalDateTime.now();
+
+    public Food(String name, String type, String description, int price) {
+        this.name = name;
+        this.type = type;
+        this.description = description;
+        this.price = price;
+    }
 
     public enum FoodStatus {
         FOOD_FOR_SALE("판매중"),

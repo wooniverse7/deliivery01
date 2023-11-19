@@ -1,16 +1,16 @@
-package com.example.deliivery01.foods.repository;
+package com.example.deliivery01.food.repository;
 
-import com.example.deliivery01.foods.Food;
+import com.example.deliivery01.food.domain.Food;
 import org.springframework.stereotype.Repository;
 
 import java.util.*;
 
 @Repository
-public class FoodRepository {
+public class FoodMapRepository {
     private Map<Long, Food> db = new HashMap<>();
     private static Long sequence = 0L;
 
-    public FoodRepository() {
+    public FoodMapRepository() {
         this.db = new HashMap<>();
         this.sequence = 0L;
     }
@@ -22,14 +22,17 @@ public class FoodRepository {
         return food;
     }
 
-    public Optional<Food> findById(Long id) {
-        return Optional.ofNullable(db.get(id));
+//    public Optional<Food> findById(Long id) {
+//        return Optional.ofNullable(db.get(id));
+//    }
+    public Food findById(Long id) {
+        return db.get(id);
     }
 
     // 이름으로 검색
     public Optional<Food> findById(String name) {
         return db.values().stream()
-                .filter(food -> food.getFoodName().equals(name))
+                .filter(food -> food.getName().equals(name))
                 .findAny();
     }
 
