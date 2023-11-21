@@ -37,3 +37,6 @@ Lv2
 | 수정 날짜 | updated_at     | timestamp    | No   |     |           | No     |
 | 회원 번호 | member_id      | integer      | No   |     | member_id | No     |
 
+
+23.11.21
+Food 조회, 삭제 구현
